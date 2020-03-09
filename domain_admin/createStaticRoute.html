@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../includes/main.css" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <title>Cosmic</title>
+    </head>
+    <body>
+        <div id="insidetopbg">
+            <div id="inside_wrapper">
+                <div class="uppermenu_panel">
+                    <div class="uppermenu_box"></div>
+                </div>
+                <div id="main_master">
+                    <div id="inside_header">
+                        <div class="header_top">
+                            <a class="cloud_logo" href="https://github.com/MissionCriticalCloud/cosmic/issues"></a>
+                            <div class="mainemenu_panel"></div>
+                        </div>
+                    </div>
+                    <div id="main_content">
+                        <div class="inside_apileftpanel">
+                            <div class="inside_contentpanel" style="width:930px;">
+                                <div class="api_titlebox">
+                                    <div class="api_titlebox_left">
+                                        <span>
+                                                        Cosmic Domain Admin API Reference
+                                                    </span>
+                                        <p></p>
+                                        <h1>createStaticRoute</h1>
+                                        <p>Creates a static route</p>
+                                    </div>
+                                    <div class="api_titlebox_right">
+                                        <a class="api_backbutton" href="../TOC_Domain_Admin.html"></a>
+                                    </div>
+                                </div>
+                                <div class="api_tablepanel">
+                                    <h2>Request parameters</h2>
+                                    <table class="apitable">
+                                        <tr class="hed">
+                                            <td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>cidr</strong></td><td style="width:500px;"><strong>The CIDR to create the static route for</strong></td><td style="width:180px;"><strong>true</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>nexthop</strong></td><td style="width:500px;"><strong>IP address of the nexthop to route the CIDR to</strong></td><td style="width:180px;"><strong>true</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>vpcid</strong></td><td style="width:500px;"><strong>The VPC id we are creating static route for.</strong></td><td style="width:180px;"><strong>true</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><i>gatewayid</i></td><td style="width:500px;"><i>The private gateway id to get the ipaddress from (DEPRECATED!).</i></td><td style="width:180px;"><i>false</i></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="api_tablepanel">
+                                    <h2>Response Tags</h2>
+                                    <table class="apitable">
+                                        <tr class="hed">
+                                            <td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the ID of static route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account associated with the static route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>cidr</strong></td><td style="width:500px;">The CIDR to route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain associated with the static route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the ID of the domain associated with the static route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>nexthop</strong></td><td style="width:500px;">Gateway ip address the CIDR is routed to</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>project</strong></td><td style="width:500px;">the project name of the static route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>projectid</strong></td><td style="width:500px;">the project id of the static route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>state</strong></td><td style="width:500px;">the state of the static route</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>vpcid</strong></td><td style="width:500px;">VPC the static route belongs to</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:200px;"><strong>tags(*)</strong></td><td style="width:500px;">the list of resource tags associated with static route</td>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">the account associated with the tag</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>customer</strong></td><td style="width:500px;">customer associated with the tag</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>domain</strong></td><td style="width:500px;">the domain associated with the tag</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>domainid</strong></td><td style="width:500px;">the ID of the domain associated with the tag</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>key</strong></td><td style="width:500px;">tag key name</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>project</strong></td><td style="width:500px;">the project name where tag belongs to</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>projectid</strong></td><td style="width:500px;">the project id the tag belongs to</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>resourceid</strong></td><td style="width:500px;">id of the resource</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>resourcetype</strong></td><td style="width:500px;">resource type</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:180px; padding-left:25px;"><strong>value</strong></td><td style="width:500px;">tag value</td>
+                                            </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <div id="footer_mainmaster"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
